@@ -24,6 +24,13 @@ object Taz: Car {
     override fun getEquipment(): String = "Крыса"
 
     /**
+     * Горловина неисправна
+     */
+    override var mouth: TankMouth
+        get() = throw NotImplementedError("Вместо горловины - дырка от бублика")
+        set(_) {}
+
+    /**
      * Руль вправо на [degrees] градусов
      */
     override fun wheelToRight(degrees: Int) {
